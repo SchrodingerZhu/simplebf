@@ -1,0 +1,6 @@
+[submodule "PEGTL"]
+	path = PEGTL
+	url = https://github.com/taocpp/PEGTL
+[submodule "cxxopts"]
+	path = cxxopts
+	url = https://github.com/jarro2783/cxxopts
