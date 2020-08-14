@@ -171,9 +171,8 @@ namespace ast {
             builder.SetInsertPoint(basic_block);
             array = builder.CreateAlloca(int_type, ConstantInt::get( context , APInt(32, StringRef("10000"), 10)));
             pointer = builder.CreateAlloca(int_type, nullptr);
-            auto zero  = ConstantInt::get( context , APInt(32, StringRef("0"), 10));
-            builder.CreateStore(zero, pointer);
             if(child) child->codegen();
+            auto zero  = ConstantInt::get( context , APInt(32, StringRef("0"), 10));
             builder.CreateRet(zero);
             return toplevel;
         }
